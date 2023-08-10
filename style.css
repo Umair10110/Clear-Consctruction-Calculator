@@ -1,0 +1,153 @@
+/* .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  } */
+
+  .containerrr {
+    background-color: #ffffff;
+   
+    overflow: auto;
+    padding: 0px 10%;
+    
+  }
+  .calculator_table td:first-of-type {
+    position: sticky;
+    left: 0;
+    border-left: none;
+    background: #f4f4f4 !important;
+    color: #212121 !important;
+    font-weight: bold;
+	  width: 25%;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+}
+.calculator_table th:first-of-type {
+    position: sticky;
+    left: 0;
+/*     border-left: none;
+    background: #f4f4f4 !important;
+    color: #212121 !important; */
+    font-weight: bold;
+	width: 25%;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+}
+  /* Hide all tabs by default */
+  .tab {
+    display: none;
+  }
+  #regForm table th{
+    font-family: Lato-Bold;
+    font-size: 15px;
+    color: #000;
+    line-height: 1.4;
+    padding: 15px;
+    background-color: #F7B211;
+   
+  }
+  /* Style the step indicators */
+  .step {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: inline-block;
+    margin: 0 2px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Add active class to the current step */
+  .step.active {
+    background-color: #4CAF50;
+  }
+  #regForm table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  #regForm td {
+    border: 1px solid #f7b21159;
+    padding: 15px;
+    background: #393939;
+    color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    
+  }
+  #regForm  th {
+    background-color: #f2f2f2;
+  }
+  #regForm table input {
+    border: none;
+    width: 100%;
+    height: 5vh;
+    background: #393939;
+    color: #fff;
+    outline: none;
+}  
+.head {
+    text-align: left;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button#nextBtn {
+    color: #F7B211!important;
+    border-width: 2px!important;
+    border-color: #F7B211;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-family: 'NeueHaasDisplayRoman',Helvetica,Arial,Lucida,sans-serif!important;
+    text-transform: uppercase!important;
+    background-color: RGBA(255,255,255,0);
+    padding: 10px 25px;
+    margin-left: 10px;
+    
+}
+button#prevBtn {
+    color: #F7B211!important;
+    border-width: 2px!important;
+    border-color: #F7B211;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-family: 'NeueHaasDisplayRoman',Helvetica,Arial,Lucida,sans-serif!important;
+    text-transform: uppercase!important;
+    background-color: RGBA(255,255,255,0);
+    padding: 10px;
+    margin-left: 10px;
+    
+}
+button#nextBtn:hover {
+    background: #393939;
+}
+button#prevBtn:hover {
+    background: #393939;
+}
+.my_btn {
+    display: flex;
+    justify-content: center;
+}
+.tab h3 {
+    text-align: center;
+    margin: 20px;
+}
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+  @media (max-width: 600px) {
+  .containerrr {
+    padding: 0px;
+  }
+	  #regForm td{
+		  font-size: 12px;
+		  padding: 8px;
+	  }
+	  #regForm table th {
+    font-size: 12px;
+}
+}

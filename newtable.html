@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table with Multiply</title>
+</head>
+<body>
+  <table id="myTable">
+    <thead>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" class="column1" oninput="calculateResult(this)"></td>
+        <td><input type="text" class="column2" oninput="calculateResult(this)"></td>
+        <td><input type="text" class="result" readonly></td>
+      </tr>
+      <tr>
+        <td><input type="text" class="column1" oninput="calculateResult(this)"></td>
+        <td><input type="text" class="column2" oninput="calculateResult(this)"></td>
+        <td><input type="text" class="result" readonly></td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Code</th>
+        <th>Quantity</th>
+        <th>Cost Value</th>
+        <th>Unit Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Other</td>
+        <td><input type="text" class="product-code"></td>
+        <td><input type="number" class="quantity" value="1" placeholder="Quantity.."></td>
+        <td><input type="number" class="cost-value" placeholder="Cost Value"></td>
+        <td><input type="text" class="unit-total" readonly></td>
+      </tr>
+      <!-- Add more rows here if needed -->
+    </tbody>
+  </table>
+
+  <script>
+    // function calculateResult(input) {
+    //   const row = input.parentNode.parentNode;
+    //   const column1Value = parseFloat(row.querySelector(".column1").value);
+    //   const column2Value = parseFloat(row.querySelector(".column2").value);
+    //   const resultInput = row.querySelector(".result");
+
+    //   if (!isNaN(column1Value) && !isNaN(column2Value)) {
+    //     const result = column1Value * column2Value;
+    //     resultInput.value = result;
+    //   } else {
+    //     resultInput.value = "";
+    //   }
+    // }
+
+    function calculateResult() {
+    const rows = document.querySelectorAll('tbody tr');
+    rows.forEach((row) => {
+      const quantity = parseFloat(row.querySelector('.quantity').value);
+      const costValue = parseFloat(row.querySelector('.cost-value').value);
+      const unitTotalInput = row.querySelector('.unit-total');
+
+      if (!isNaN(quantity) && !isNaN(costValue)) {
+        const result = quantity * costValue;
+        unitTotalInput.value = result;
+      } else {
+        unitTotalInput.value = "";
+      }
+    });
+  }
+
+  // Attach event listeners to the inputs
+  const inputs = document.querySelectorAll('.quantity, .cost-value');
+  inputs.forEach((input) => {
+    input.addEventListener('input', calculateResult);
+  });
+  </script>
+</body>
+</html>

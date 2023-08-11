@@ -6,25 +6,15 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Document</title>
-
 </head>
 <body>
-<div>Hello World</div>
-    <div class="step-indicators">
-        <span class="step-indicator" onclick="showStep(1)">1</span>
-        <span class="step-indicator" onclick="showStep(2)">2</span>
-        <span class="step-indicator" onclick="showStep(3)">3</span>
-      </div>
-    
     <div class="form-container containerrr">
         <form id="regForm">
-        <div class="tab" id="step1" style="display: block;">
-            <div class="step">
-                <span class="step-number" data-step="0">1</span>
-            </div>
-               
+        <div class="tab" style="display: block;">
         <h3>Step 1: PROJECT PREP:</h3>
         <div class="calculator_table">
+        
+        <!-- Add more rows here -->
         <table class="pro_prep">
         <tbody>
         <tr class="row100 head">
@@ -37,26 +27,23 @@
         </tr>
         <tr>
         <td>As Buits:</td>
-        
-
-        <td><input placeholder="Enter some text" name="name" id="myinput_id" /></td>
+        <td><input type="text" /></td>
         <td><input type="number" class="column1" id="asbuilt_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
-        <td><input type="number" class="column2"  value="500" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="asbuilt_unit_cost" value="500" oninput="calculateResult(this)" /></td>
         <td id="asbuilt_unit_total" class="result">-</td>
-        <td id="newtesting"> <p id="log"></p></td>
+        <td></td>
         </tr>
         <tr>
         <td>Estimated Permit Cost:</td>
-        <td><input type="text"/ id="mysecondID"></td>
+        <td><input type="text" /></td>
         <td><input type="number" class="column1" id="estimated_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="estimated_unit_cost" value="2500" oninput="calculateResult(this)" /></td>
         <td id="estimated_unit_total" class="result"></td>
         <td></td>
         </tr>
-        <!-- Add more rows here -->
         <tr>
-        <td>Archectecitual Design and Structural plans:</td>
-        <td><input type="text" / onclick="alert('click event occurred')" ></td>
+        <td>A<span>rchitecture</span> Design and Structural plans:</td>
+        <td><input type="text" /></td>
         <td><input type="number" class="column1" id="archectecitual_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="archectecitual_unit_cost" value="7500" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td id="archectecitual_unit_total" class="result"></td>
@@ -64,14 +51,14 @@
         </tr>
         <tr>
         <td>Engineering</td>
-        <td><input type="text" id="engineering_unit_totalll" onmouseover="myFunction()"></td>
+        <td><input type="text" /></td>
         <td><input type="number" class="column1" id="engineering_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="engineering_unit_cost" value="2000" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td id="engineering_unit_total" class="result"></td>
-        <td id="sdfas"></td>
+        <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="other1_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="other1_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -79,7 +66,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="other2_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="other2_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -87,7 +74,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="other3_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="other3_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -95,7 +82,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="other4_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="other4_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -103,7 +90,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="other5_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="other5_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -111,7 +98,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="other6_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="other6_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -119,7 +106,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="other7_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="other7_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -133,16 +120,13 @@
         </tr>
         </tbody>
         </table>
-        <button onclick="showStep(2)">Next</button>
         </div>
-       
-    </div>
-        <div class="tab" id="step2">
-            <div class="step">
-            <span class="step-number" data-step="1">2</span>
         </div>
+        <div class="tab">
         <h3>Step 2: DEMO:</h3>
         <div class="calculator_table">
+        
+        <!-- Add more rows here -->
         <table>
         <tbody>
         <tr class="row100 head">
@@ -169,7 +153,6 @@
         <td id="cosmetic_unit_total" class="result"></td>
         <td></td>
         </tr>
-        <!-- Add more rows here -->
         <tr>
         <td>General Demo:</td>
         <td><input type="text" /></td>
@@ -195,7 +178,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherdemo2_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherdemo2_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -203,7 +186,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherdemo3_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherdemo3_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -211,7 +194,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherdemo4_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherdemo4_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -219,7 +202,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherdemo5_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherdemo5_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -227,7 +210,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherdemo6_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherdemo6_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -235,7 +218,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherdemo7_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherdemo7_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -249,15 +232,13 @@
         </tr>
         </tbody>
         </table>
-      </div>  
-    
         </div>
-        <div class="tab" id="step3">
-            <div class="step">
-                <span class="step-number" data-step="2">3</span>
-            </div>
+        </div>
+        <div class="tab">
         <h3>Step 3 GENERAL EXTERIOR:</h3>
         <div class="calculator_table">
+        
+        <!-- Add more rows here -->
         <table id="myTable">
         <tbody>
         <tr class="row100 head">
@@ -284,7 +265,6 @@
         <td class="result"></td>
         <td></td>
         </tr>
-        <!-- Add more rows here -->
         <tr>
         <td>Slider:</td>
         <td><input type="text" /></td>
@@ -446,7 +426,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" value="Deck soffit and repairs" /></td>
         <td><input type="number" class="column1" id="othergeneral_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othergeneral_unit_cost" value="2000" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -486,7 +466,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>Other</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="othergeneral_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othergeneral_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -494,7 +474,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>Other</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="othergeneral2_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othergeneral2_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -502,7 +482,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>Other</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="othergeneral3_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othergeneral3_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -510,7 +490,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>Other</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="othergeneral4_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othergeneral4_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -526,13 +506,11 @@
         </table>
         </div>
         </div>
-       
-        <div class="tab" id="step4">
-            <div class="step">
-                <span class="step-number" data-step="3">4</span>
-            </div>
+        <div class="tab">
         <h3>Step 4 PAINT AND DRYWALL:</h3>
         <div class="calculator_table">
+        
+        <!-- Add more rows here -->
         <table id="paint_drywall">
         <tbody>
         <tr class="row100 head">
@@ -559,7 +537,6 @@
         <td class="result"></td>
         <td></td>
         </tr>
-        <!-- Add more rows here -->
         <tr>
         <td>Paint Fireplace:</td>
         <td><input type="text" /></td>
@@ -609,7 +586,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherpaint_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherpaint_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -617,7 +594,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherpaint2_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherpaint2_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -625,7 +602,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherpaint3_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherpaint3_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -633,7 +610,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherpaint4_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherpaint4_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -641,7 +618,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherpaint5_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherpaint5_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -649,7 +626,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherpaint6_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherpaint6_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -665,13 +642,11 @@
         </table>
         </div>
         </div>
-        
-        <div class="tab" id="step5">
-            <div class="step">
-                <span class="step-number" data-step="4">5</span>
-            </div>
+        <div class="tab">
         <h3>Step 5 FRAMING:</h3>
         <div class="calculator_table">
+        
+        <!-- Add more rows here -->
         <table id="framing">
         <tbody>
         <tr class="row100 head">
@@ -698,7 +673,6 @@
         <td class="result"></td>
         <td></td>
         </tr>
-        <!-- Add more rows here -->
         <tr>
         <td>Create Master Suite:</td>
         <td><input type="text" /></td>
@@ -748,7 +722,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherframing_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherframing_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -756,7 +730,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherframing2_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherframing2_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -764,7 +738,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherframing3_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherframing3_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -772,7 +746,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherframing4_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherframing4_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -780,7 +754,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherframing5_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherframing5_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -788,7 +762,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherframing6_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherframing6_unit_cost" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -803,14 +777,12 @@
         </tbody>
         </table>
         </div>
-        
         </div>
-        <div class="tab" id="step6">
-            <div class="step">
-                <span class="step-number" data-step="5">6</span>
-            </div>
+        <div class="tab">
         <h3>Step 6 PLUMBING:</h3>
         <div class="calculator_table">
+        
+        <!-- Add more rows here -->
         <table id="plumbing">
         <tbody>
         <tr class="row100 head">
@@ -835,16 +807,15 @@
         <td><input type="number" class="column1" id="bathfixture_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="bathfixture_unit_cost" value="200" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="bathfixture_allowance_unit_cost" value="150" readonly="readonly" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="bathfixture_allowance_unit_cost" value="150" oninput="calculateResult(this)" /></td>
         </tr>
-        <!-- Add more rows here -->
         <tr>
         <td>Facuet Fixtures</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="facuet_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="facuet_unit_cost" value="100" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="facuet_allowance_unit_cost" value="50" readonly="readonly" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="facuet_allowance_unit_cost" value="50" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Kitchen Faucet:</td>
@@ -852,7 +823,7 @@
         <td><input type="number" class="column1" id="kitchenfaucet_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="kitchenfaucet_unit_cost" value="200" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="kitchenfacuet_allowance_unit_cost" value="150" readonly="readonly" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="kitchenfacuet_allowance_unit_cost" value="150" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Sinks</td>
@@ -860,7 +831,7 @@
         <td><input type="number" class="column1" id="sinkplum_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="sinkplum_unit_cost" value="100" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="sinkplum_allowance_unit_cost" value="40" readonly="readonly" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="sinkplum_allowance_unit_cost" value="40" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Toilets</td>
@@ -868,7 +839,7 @@
         <td><input type="number" class="column1" id="toilets_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="toilets_unit_cost" value="150" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="toilets_allowance_unit_cost" value="100" readonly="readonly" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="toilets_allowance_unit_cost" value="100" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Plumbing Trenching and Repair:</td>
@@ -884,7 +855,7 @@
         <td><input type="number" class="column1" id="bathtub_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="bathtub_unit_cost" value="250" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="bathtub_allowance_unit_cost" value="150" readonly="readonly" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="bathtub_allowance_unit_cost" value="150" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Shower Pan</td>
@@ -892,7 +863,7 @@
         <td><input type="number" class="column1" id="showerpan_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="showerpan_unit_cost" value="200" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="showerpan_allowance_unit_cost" value="100" readonly="readonly" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="showerpan_allowance_unit_cost" value="100" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Mud Pan Prep, Curb, Waterproofing</td>
@@ -908,7 +879,7 @@
         <td><input type="number" class="column1" id="showerdoor_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="showerdoor_unit_cost" value="1250" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="showerdoor_allowance_unit_cost" value="1000" readonly="readonly" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="showerdoor_allowance_unit_cost" value="1000" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>GAS HWT:</td>
@@ -935,7 +906,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherplumbing_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherplumbing_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -943,7 +914,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherplumbing2_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherplumbing2_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -951,7 +922,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherplumbing3_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherplumbing3_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -959,7 +930,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherplumbing4_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherplumbing4_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -967,7 +938,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherplumbing5_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherplumbing5_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -975,7 +946,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherplumbing6_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherplumbing6_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -991,13 +962,11 @@
         </table>
         </div>
         </div>
-       
-        <div class="tab" id="step7">
-            <div class="step">
-                <span class="step-number" data-step="6">7</span>
-            </div>
+        <div class="tab">
         <h3>Step 7 ELECTRICAL:</h3>
         <div class="calculator_table">
+        
+        <!-- Add more rows here -->
         <table id="electrical">
         <tbody>
         <tr class="row100 head">
@@ -1024,7 +993,6 @@
         <td class="result"></td>
         <td></td>
         </tr>
-        <!-- Add more rows here -->
         <tr>
         <td>Electircal Panel:</td>
         <td><input type="text" /></td>
@@ -1071,7 +1039,7 @@
         <td><input type="number" class="column1" id="ceilingfixture_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="ceilingfixture_unit_cost" value="80" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="ceilingfixture_allowance_unit_cost" value="30" readonly="readonly" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="ceilingfixture_allowance_unit_cost" value="30" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Bathroom Fixtures:</td>
@@ -1079,7 +1047,7 @@
         <td><input type="number" class="column1" id="bathroomfixture_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="bathroomfixture_unit_cost" value="150" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="bathroomfixture_allowance_unit_cost" value="100" readonly="readonly" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="bathroomfixture_allowance_unit_cost" value="100" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Bathroom Fans:</td>
@@ -1087,7 +1055,7 @@
         <td><input type="number" class="column1" id="bathfans_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="bathfans_unit_cost" value="80" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="bathfans_allowance_unit_cost" value="30" readonly="readonly" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="bathfans_allowance_unit_cost" value="30" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Can Lighting</td>
@@ -1103,7 +1071,7 @@
         <td><input type="number" class="column1" id="pendent_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="pendent_unit_cost" value="100" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="pendent_allowance_unit_cost" value="50" readonly="readonly" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="pendent_allowance_unit_cost" value="50" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Exterior Lights:</td>
@@ -1111,7 +1079,7 @@
         <td><input type="number" class="column1" id="exteriorlight_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="exteriorlight_unit_cost" value="80" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="exteriorlight_allowance_unit_cost" value="30" readonly="readonly" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="exteriorlight_allowance_unit_cost" value="30" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Dining Lights</td>
@@ -1119,10 +1087,10 @@
         <td><input type="number" class="column1" id="dininglight_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="dininglight_unit_cost" value="250" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="dininglight_allowance_unit_cost" value="200" readonly="readonly" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="dininglight_allowance_unit_cost" value="200" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherelectrical_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherelectrical_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1130,7 +1098,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherelectrical2_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherelectrical2_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1138,7 +1106,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherelectrical3_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherelectrical3_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1146,7 +1114,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherelectrical4_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherelectrical4_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1154,7 +1122,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherelectrical5_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherelectrical5_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1162,7 +1130,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherelectrical6_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherelectrical6_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1178,13 +1146,11 @@
         </table>
         </div>
         </div>
-        
-        <div class="tab" id="step8">
-            <div class="step">
-                <span class="step-number" data-step="7">8</span>
-            </div>
+        <div class="tab">
         <h3>Step 8 HVAC:</h3>
         <div class="calculator_table">
+        
+        <!-- Add more rows here -->
         <table id="hvac">
         <tbody>
         <tr class="row100 head">
@@ -1211,7 +1177,6 @@
         <td class="result"></td>
         <td></td>
         </tr>
-        <!-- Add more rows here -->
         <tr>
         <td>Ducting:</td>
         <td><input type="text" value="Misc ducting repiars" /></td>
@@ -1261,7 +1226,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherhvac_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherhvac_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1269,7 +1234,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherhvac2_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherhvac2_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1277,7 +1242,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherhvac3_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherhvac3_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1285,7 +1250,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherhvac4_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherhvac4_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1293,7 +1258,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherhvac5_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherhvac5_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1301,7 +1266,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherhvac6_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherhvac6_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1317,13 +1282,11 @@
         </table>
         </div>
         </div>
-        
-        <div class="tab" id="step9">
-            <div class="step">
-                <span class="step-number" data-step="8">9</span>
-            </div>
+        <div class="tab">
         <h3>Step 9 CABINETS:</h3>
         <div class="calculator_table">
+        
+        <!-- Add more rows here -->
         <table id="cabinets">
         <tbody>
         <tr class="row100 head">
@@ -1350,7 +1313,6 @@
         <td class="result"></td>
         <td></td>
         </tr>
-        <!-- Add more rows here -->
         <tr>
         <td>Large Kitchen:</td>
         <td><input type="text" value="Cabinets, hardware installed" /></td>
@@ -1389,7 +1351,7 @@
         <td><input type="number" class="column1" id="pedistalsink_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="pedistalsink_unit_cost" value="200" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="pedistalsink_allowance_unit_cost" value="100" readonly="readonly" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="pedistalsink_allowance_unit_cost" value="100" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Kitchen Sink:</td>
@@ -1397,7 +1359,7 @@
         <td><input type="number" class="column1" id="kitchensink _qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="kitchensink_unit_cost" value="250" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="kitchensink_allowance_unit_cost" value="100" readonly="readonly" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="kitchensink_allowance_unit_cost" value="100" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Counter Tops</td>
@@ -1408,7 +1370,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="othercabinet2_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othercabinet2_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1416,7 +1378,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="othercabinet3_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othercabinet3_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1424,7 +1386,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="othercabinet4_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othercabinet4_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1432,7 +1394,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="othercabinet5_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othercabinet5_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1440,7 +1402,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="othercabinet6_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othercabinet6_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1456,13 +1418,11 @@
         </table>
         </div>
         </div>
-        
-        <div class="tab" id="step10">
-            <div class="step">
-                <span class="step-number" data-step="9">10</span>
-            </div>
+        <div class="tab">
         <h3>Step 10 MILWORK:</h3>
         <div class="calculator_table">
+        
+        <!-- Add more rows here -->
         <table id="milwork">
         <tbody>
         <tr class="row100 head">
@@ -1489,14 +1449,13 @@
         <td class="result"></td>
         <td></td>
         </tr>
-        <!-- Add more rows here -->
         <tr>
         <td>Interior Doors:</td>
         <td><input type="text" value="door replacement as needed" /></td>
         <td><input type="number" class="column1" id="interiordoor_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="interiordoor_unit_cost" value="250" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="interiordoor_allowance_unit_cost" value="175" readonly="readonly" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="interiordoor_allowance_unit_cost" value="175" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Front Door:</td>
@@ -1504,7 +1463,7 @@
         <td><input type="number" class="column1" id="frontdoor_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="frontdoor_unit_cost" value="1150" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="frontdoor_allowance_unit_cost" value="900" readonly="readonly" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="frontdoor_allowance_unit_cost" value="900" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Interior Firerated Garage Door:</td>
@@ -1520,7 +1479,7 @@
         <td><input type="number" class="column1" id="exteriordoor_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="exteriordoor_unit_cost" value="500" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="exteriordoor_allowance_unit_cost" value="250" readonly="readonly" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="exteriordoor_allowance_unit_cost" value="250" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Closet Doors:</td>
@@ -1528,10 +1487,10 @@
         <td><input type="number" class="column1" id="closetdoor_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="closetdoor_unit_cost" value="145" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="closetdoor_allowance_unit_cost" value="95" readonly="readonly" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="closetdoor_allowance_unit_cost" value="95" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="othermilwork_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othermilwork_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1539,7 +1498,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="othermilwork3_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othermilwork3_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1547,7 +1506,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="othermilwork4_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othermilwork4_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1555,7 +1514,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="othermilwork5_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othermilwork5_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1563,7 +1522,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="othermilwork6_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="othermilwork6_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1579,13 +1538,11 @@
         </table>
         </div>
         </div>
-       
-        <div class="tab" id="step11">
-            <div class="step">
-                <span class="step-number" data-step="10">11</span>
-            </div>
+        <div class="tab">
         <h3>Step 11 FLOORING AND TILE:</h3>
         <div class="calculator_table">
+        
+        <!-- Add more rows here -->
         <table id="flooring_tile">
         <tbody>
         <tr class="row100 head">
@@ -1612,14 +1569,13 @@
         <td class="result"></td>
         <td></td>
         </tr>
-        <!-- Add more rows here -->
         <tr>
         <td>Solid Surface Floors:</td>
         <td><input type="text" value="kitchen hardwoods" /></td>
         <td><input type="number" class="column1" id="solidsurface_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="solidsurface_unit_cost" value="5.50" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="solidsurface_allowance_unit_cost" value="3.50" readonly="readonly" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="solidsurface_allowance_unit_cost" value="3.50" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Vinyl:</td>
@@ -1627,7 +1583,7 @@
         <td><input type="number" class="column1" id="vinyl_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="vinyl_unit_cost" value="1" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="vinyl_allowance_unit_cost" value="0.5" readonly="readonly" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="vinyl_allowance_unit_cost" value="0.5" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Hardwood Refinish</td>
@@ -1643,7 +1599,7 @@
         <td><input type="number" class="column1" id="tile_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="tile_unit_cost" value="10" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="tile_allowance_unit_cost" value="2.75" readonly="readonly" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="tile_allowance_unit_cost" value="2.75" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Tile Bath Surrounds:</td>
@@ -1651,7 +1607,7 @@
         <td><input type="number" class="column1" id="tilebath_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="tilebath_unit_cost" value="1000" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="tilebath_allowance_unit_cost" value="2.75" readonly="readonly" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="tilebath_allowance_unit_cost" value="2.75" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Shower Surround:</td>
@@ -1659,7 +1615,7 @@
         <td><input type="number" class="column1" id="showersur_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="showersur_unit_cost" value="1100" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="showersur_allowance_unit_cost" value="2.75" readonly="readonly" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="showersur_allowance_unit_cost" value="2.75" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
         <td>Kitchen BackSplash</td>
@@ -1667,10 +1623,10 @@
         <td><input type="number" class="column1" id="backsplash_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="backsplash_unit_cost" value="1100" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="backsplash_allowance_unit_cost" value="5" readonly="readonly" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="backsplash_allowance_unit_cost" value="5" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherflooring_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherflooring_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1678,7 +1634,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherflooring2_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherflooring2_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1686,7 +1642,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherflooring3_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherflooring3_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1694,7 +1650,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherflooring4_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherflooring4_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1702,7 +1658,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherflooring5_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherflooring5_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1718,13 +1674,11 @@
         </table>
         </div>
         </div>
-        
-        <div class="tab" id="step12">
-            <div class="step">
-                <span class="step-number" data-step="11">12</span>
-            </div>
+        <div class="tab">
         <h3>Step 12 INTERIOR GENERAL:</h3>
         <div class="calculator_table">
+        
+        <!-- Add more rows here -->
         <table id="interior_general">
         <tbody>
         <tr class="row100 head">
@@ -1751,7 +1705,6 @@
         <td class="result"></td>
         <td></td>
         </tr>
-        <!-- Add more rows here -->
         <tr>
         <td>Interior Trim Out:</td>
         <td><input type="text" value="Mirrors, Curtin Rods, Door Handles, Door Stops, mirror SEE RECOMMENDED SPECS" /></td>
@@ -1790,10 +1743,10 @@
         <td><input type="number" class="column1" id="woodrailing_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="woodrailing_unit_cost" value="200" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         <td class="result"></td>
-        <td><input type="number" class="column2" id="closetdoor_allowance_unit_cost" value="95" readonly="readonly" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
+        <td><input type="number" class="column2" id="closetdoor_allowance_unit_cost" value="95" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherinterior_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherinterior_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1801,7 +1754,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherinterior2_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherinterior_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1809,7 +1762,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherinterior4_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherinterior4_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1817,7 +1770,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherinterior5_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherinterior5_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1825,7 +1778,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherinterior6_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherinterior6_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1841,13 +1794,11 @@
         </table>
         </div>
         </div>
-       
-        <div class="tab" id="step13">
-            <div class="step">
-                <span class="step-number" data-step="12">13</span>
-            </div>
+        <div class="tab">
         <h3>Step 13 APPLAINCES:</h3>
         <div class="calculator_table">
+        
+        <!-- Add more rows here -->
         <table id="applainces">
         <tbody>
         <tr class="row100 head">
@@ -1874,7 +1825,6 @@
         <td class="result"></td>
         <td></td>
         </tr>
-        <!-- Add more rows here -->
         <tr>
         <td>Counter Depth Fridge Upgrade:</td>
         <td><input type="text" /></td>
@@ -1892,7 +1842,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherapplainces_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherapplainces_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1900,7 +1850,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherapplainces3_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherapplainces3_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1908,7 +1858,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherapplainces4_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherapplainces4_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1916,7 +1866,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherapplainces5_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherapplainces5_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1924,7 +1874,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherapplainces6_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherapplainces6_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -1940,13 +1890,11 @@
         </table>
         </div>
         </div>
-      
-        <div class="tab" id="step14">
-            <div class="step">
-                <span class="step-number" data-step="13">14</span>
-            </div>
+        <div class="tab">
         <h3>Step 14 LANDSCAPING:</h3>
         <div class="calculator_table">
+        
+        <!-- Add more rows here -->
         <table id="landscaping">
         <tbody>
         <tr class="row100 head">
@@ -1973,7 +1921,6 @@
         <td class="result"></td>
         <td></td>
         </tr>
-        <!-- Add more rows here -->
         <tr>
         <td>Paver Patio</td>
         <td><input type="text" value="10x10 Paver Patio" /></td>
@@ -2039,7 +1986,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER:</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherlandscaping_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherlandscaping_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -2047,7 +1994,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherlandscaping2_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherlandscaping2_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -2055,7 +2002,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherlandscaping3_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherlandscaping3_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -2063,7 +2010,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherlandscaping4_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherlandscaping4_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -2071,7 +2018,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherlandscaping5_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherlandscaping5_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -2079,7 +2026,7 @@
         <td></td>
         </tr>
         <tr>
-        <td>OTHER</td>
+        <td contenteditable="true">OTHER</td>
         <td><input type="text" /></td>
         <td><input type="number" class="column1" id="otherlandscaping6_qty" value="1" placeholder="Quanity.." oninput="calculateResult(this)" /></td>
         <td><input type="number" class="column2" id="otherlandscaping6_unit_cost" value="0" placeholder="Cost Value" oninput="calculateResult(this)" /></td>
@@ -2095,11 +2042,7 @@
         </table>
         </div>
         </div>
-        </div>
-        <div class="tab" id="step15">
-            <div class="step">
-                <span class="step-number" data-step="14">15</span>
-            </div>
+        <div class="tab">
         <h3>Step 15 Total:</h3>
         <div class="calculator_table">
         <table id="total_final">
@@ -2109,59 +2052,59 @@
         <th>Total</th>
         </tr>
         <tr>
-        <td>PROJECT PREP:</td>
-        <td id="prep_before_total"></td>
+        <td id="construction_0"><a href="javascript:void(0)" onclick="nextPrev(-14)">PROJECT PREP:</a></td>
+        <td id="prep_before_total" ></td>
         </tr>
         <tr>
-        <td>DEMO:</td>
+        <td id="construction_1" ><a href="javascript:void(0)" onclick="nextPrev(-13)">DEMO:</a></td>
         <td id="demo_before_total"></td>
         </tr>
         <tr>
-        <td>GENERAL EXTERIOR:</td>
-        <td id="exterior_before_total"></td>
+        <td id="construction_2"><a href="javascript:void(0)" onclick="nextPrev(-12)">GENERAL EXTERIOR:</a></td>
+        <td id="exterior_before_total" ></td>
         </tr>
         <tr>
-        <td>PAINT:</td>
+        <td id="construction_3" ><a href="javascript:void(0)" onclick="nextPrev(-11)">PAINT:</a></td>
         <td id="paint_before_total"></td>
         </tr>
         <tr>
-        <td>FRAMING:</td>
+        <td id="construction_4" ><a href="javascript:void(0)" onclick="nextPrev(-10)">FRAMING:</a></td>
         <td id="framing_before_total"></td>
         </tr>
         <tr>
-        <td>PLUMBING:</td>
+        <td id="construction_5" ><a href="javascript:void(0)" onclick="nextPrev(-9)">PLUMBING:</a></td>
         <td id="plumbing_before_total"></td>
         </tr>
         <tr>
-        <td>ELECTRICAL:</td>
+        <td id="construction_6" ><a href="javascript:void(0)" onclick="nextPrev(-8)">ELECTRICAL:</a></td>
         <td id="electrical_before_total"></td>
         </tr>
         <tr>
-        <td>HVAC:</td>
+        <td id="construction_7" ><a href="javascript:void(0)" onclick="nextPrev(-7)">HVAC:</a></td>
         <td id="hvac_before_total"></td>
         </tr>
         <tr>
-        <td>CABINETS:</td>
+        <td id="construction_8" ><a href="javascript:void(0)" onclick="nextPrev(-6)">CABINETS:</a></td>
         <td id="cabinets_before_total"></td>
         </tr>
         <tr>
-        <td>MILWORK:</td>
+        <td id="construction_9" ><a href="javascript:void(0)" onclick="nextPrev(-5)">MILWORK:</a></td>
         <td id="milwork_before_total"></td>
         </tr>
         <tr>
-        <td>FLOORING/TILE:</td>
+        <td id="construction_10" ><a href="javascript:void(0)" onclick="nextPrev(-4)">FLOORING/TILE:</a></td>
         <td id="flooring_before_total"></td>
         </tr>
         <tr>
-        <td>INTERIOR GENERAL:</td>
+        <td id="construction_11" ><a href="javascript:void(0)" onclick="nextPrev(-3)">INTERIOR GENERAL:</a></td>
         <td id="interior_before_total"></td>
         </tr>
         <tr>
-        <td>APPLIANCES:</td>
+        <td id="construction_12" ><a href="javascript:void(0)" onclick="nextPrev(-2)">APPLIANCES:</a></td>
         <td id="appliances_before_total"></td>
         </tr>
         <tr>
-        <td>LANDSCAPING:</td>
+        <td id="construction_13" ><a href="javascript:void(0)" onclick="nextPrev(-1)">LANDSCAPING:</a></td>
         <td id="landscaping_before_total"></td>
         </tr>
         <tr>
@@ -2183,15 +2126,13 @@
         </tbody>
         </table>
         </div>
-       
-        
+        </div>
         <div class="botm_nxt_prev">
         <div class="my_btn"><button type="button" id="prevBtn" onclick="nextPrev(-1)" style="display: none;">Previous</button>
         <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button></div>
         </div>
-        </form></div>
-  
-<script src="script.js"></script>
+        </form></div>  
+        <script src="script.js"></script>
 <script src="newjs.js"></script>
 </body>
 </html>

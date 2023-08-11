@@ -126,6 +126,7 @@ button#prevBtn:hover {
 .my_btn {
     display: flex;
     justify-content: center;
+	padding: 20px 0px;
 }
 .tab h3 {
     text-align: center;
